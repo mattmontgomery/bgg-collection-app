@@ -1,0 +1,26 @@
+build_api:
+  build: .
+  command: 'bash -c ''npm install --prefix bgg-api/'''
+  working_dir: /app/user
+  environment:
+    REDIS_URL: 'redis://herokuRedis:6379'
+  links:
+    - herokuRedis
+build_collection:
+  build: .
+  command: 'bash -c ''npm install --prefix bgg-collection/'''
+  working_dir: /app/user
+  environment:
+    REDIS_URL: 'redis://herokuRedis:6379'
+  links:
+    - herokuRedis
+api:
+  build: .
+  command: 'bash -c ''bgg-api/index.js'''
+  working_dir: /app/user
+  environment:
+    REDIS_URL: 'redis://herokuRedis:6379'
+  links:
+    - herokuRedis
+herokuRedis:
+  image: redis
