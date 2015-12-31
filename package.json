@@ -4,8 +4,15 @@
   "description": "BGG Collection application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/webpack --config=./node_modules/bgg-collection/webpack.config.js",
+    "start": "node ./index.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bgg-api": "github:mattmontgomery/bgg-api",
+    "bgg-collection": "github:mattmontgomery/bgg-collection",
+    "webpack": "^1.12.9"
+  }
 }

@@ -1,0 +1,6 @@
+{
+    "name": "BGG Collection App",
+    "description": "BGG Collection application",
+    "image": "heroku/nodejs",
+    "addons": ["heroku-redis"]
+}

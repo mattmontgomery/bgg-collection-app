@@ -1,0 +1,6 @@
+[submodule "bgg-collection"]
+	path = bgg-collection
+	url = git@github.com:mattmontgomery/bgg-collection.git
+[submodule "bgg-api"]
+	path = bgg-api
+	url = git@github.com:mattmontgomery/bgg-api.git
