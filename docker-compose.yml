@@ -6,7 +6,7 @@ web:
         - '80:3000'
     links:
         - herokuRedis
-    command: 'bash -c ''cd /app/user/api; npm install; npm start'''
+    command: 'bash -c ''cd /app/user/bgg-api; npm start'''
 herokuRedis:
   image: redis
   ports:
