@@ -3,6 +3,8 @@ FROM heroku/nodejs
 RUN git clone https://github.com/mattmontgomery/bgg-api.git api/
 RUN git clone https://github.com/mattmontgomery/bgg-collection.git collection/
 
+RUN cd collection; npm install; npm run build;
+RUN cd collection; npm run build;
 RUN cd api; npm install
 
 RUN cp collection/dist/* api/public/
